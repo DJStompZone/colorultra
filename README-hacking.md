@@ -39,7 +39,7 @@ Colorama at generating ANSI codes for colors and the like, and probably
 already include the feature you are trying to add to Colorama, plus many
 more.
 
-In addition to using those libraries, if you call colorama.init(), then your
+In addition to using those libraries, if you call colorultra.init(), then your
 fancy new colors, etc, will also work on Windows. This is the main purpose
 of Colorama.
 
@@ -71,7 +71,7 @@ target.
    previous version number.
 
 2. First we'll make a candidate release. Ensure  the '.rc1' suffix is
-   present on `__version__` in `colorama/__init.py__.py`, eg:
+   present on `__version__` in `colorultra/__init.py__.py`, eg:
 
         __version__ = '0.4.6rc1'
 
@@ -90,7 +90,7 @@ target.
 
 4. Verify you're all committed, merged to master.
 
-5. Tag the current commit with the `__version__` from `colorama/__init__.py`.
+5. Tag the current commit with the `__version__` from `colorultra/__init__.py`.
    We should start using
    [annotated tags for releases](https://www.tartley.com/posts/git-annotated-tags), so:
 
@@ -110,9 +110,9 @@ target.
    * Linux: `make test-release`
 
    (This currently only tests the wheel, but
-   [should soon test the sdist too](https://github.com/tartley/colorama/issues/286).)
+   [should soon test the sdist too](https://github.com/tartley/colorultra/issues/286).)
 
-8. Check the [CI builds](https://github.com/tartley/colorama/actions/)
+8. Check the [CI builds](https://github.com/tartley/colorultra/actions/)
    are complete and all passing.
 
 9. Upload the distributables to PyPI:
@@ -128,11 +128,11 @@ target.
     problems?
 
 12. Remove the '.rcX' suffix from `__version__` in
-    `colorama/__init__.py`.
+    `colorultra/__init__.py`.
 
 13. Repeat steps 4 to 9, for the actual (non-candidate) release.
 
-14. Bump the version number in `colorama/__init__.py`, and add a 'dev1'
+14. Bump the version number in `colorultra/__init__.py`, and add a 'dev1'
     suffix, eg:
 
     `0.4.5dev1`

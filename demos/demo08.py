@@ -1,10 +1,10 @@
 import fixpath
-from colorama import colorama_text, Fore
+from colorultra import colorultra_text, Fore
 
 
 def main():
     """automatically reset stdout"""
-    with colorama_text():
+    with colorultra_text():
         print(Fore.GREEN + 'text is green')
         print(Fore.RESET + 'text is back to normal')
 

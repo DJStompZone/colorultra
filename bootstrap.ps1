@@ -1,5 +1,5 @@
 $syspython="python.exe"
-$ve="$HOME\.virtualenvs\colorama"
+$ve="$HOME\.virtualenvs\colorultra"
 $bin="$ve\Scripts"
 
 echo "Create $syspython virtualenv $ve"

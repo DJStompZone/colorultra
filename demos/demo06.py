@@ -1,7 +1,7 @@
 # Copyright Jonathan Hartley 2013. BSD 3-Clause license, see LICENSE file.
 import fixpath
-import colorama
-from colorama import Fore, Back, Style, Cursor
+import colorultra
+from colorultra import Fore, Back, Style, Cursor
 from random import randint, choice
 from string import printable
 
@@ -23,7 +23,7 @@ CHARS = ' ' + printable.strip()
 PASSES = 1000
 
 def main():
-    colorama.just_fix_windows_console()
+    colorultra.just_fix_windows_console()
     pos = lambda y, x: Cursor.POS(x, y)
     # draw a white border.
     print(Back.WHITE, end='')

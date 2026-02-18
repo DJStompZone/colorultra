@@ -1,22 +1,22 @@
 0.4.6 Current release
-  * https://github.com/tartley/colorama/pull/139 Add alternative to 'init()',
+  * https://github.com/tartley/colorultra/pull/139 Add alternative to 'init()',
     called 'just_fix_windows_console'. This fixes many longstanding problems
     with 'init', such as working incorrectly on modern Windows terminals, and
     wonkiness when init gets called multiple times. The intention is that it
     just makes all Windows terminals treat ANSI the same way as other terminals
     do. Many thanks the njsmith for fixing our messes. 
-  * https://github.com/tartley/colorama/pull/352 Support Windows 10's ANSI/VT
+  * https://github.com/tartley/colorultra/pull/352 Support Windows 10's ANSI/VT
     console. This didn't exist when Colorama was created, and avoiding us
     causing havok there is long overdue. Thanks to segeviner for the initial
     approach, and to njsmith for getting it merged.
-  * https://github.com/tartley/colorama/pull/338 Internal overhaul of package
+  * https://github.com/tartley/colorultra/pull/338 Internal overhaul of package
     metadata declaration, which abolishes our use of the now heavily
     discouraged setuptools (and hence setup.py, setup.cfg and MANIFEST.in), in
     favor of hatchling (and hence pyproject.toml), generously contributed by
     ofek (author of hatchling). This includes dropping support Python3.5 and
     3.6, which are EOL, and were already dropped from setuptools, so this
     should not affect our users.
-  * https://github.com/tartley/colorama/pull/353 Attention to detail award to
+  * https://github.com/tartley/colorultra/pull/353 Attention to detail award to
     LqdBcnAtWork for a spelling fix in demo06
 0.4.5
   * Catch a racy ValueError that could occur on exit.
@@ -82,7 +82,7 @@
   * Fix issue #57 - Fore.RESET did not reset style of LIGHT_EX colors. Fixed by
     Andy Neff
   * Fix issue #51 - add context manager syntax. Thanks to Matt Olsen.
-  * Fix issue #48 - colorama didn't work on Windows when environment variable
+  * Fix issue #48 - colorultra didn't work on Windows when environment variable
     'TERM' was set.
   * Fix issue #54 - fix pylint errors in client code.
   * Changes to readme and other improvements by Marc Abramowitz and Zearin
@@ -98,8 +98,8 @@
   * Implement \033[0J and \033[1J (clear screen options)
   * Fix default ANSI parameters
   * Fix position after \033[2J (clear screen)
-  * Add command shortcuts: colorama.Cursor, colorama.ansi.set_title,
-    colorama.ansi.clear_line, colorama.ansi.clear_screen
+  * Add command shortcuts: colorultra.Cursor, colorultra.ansi.set_title,
+    colorultra.ansi.clear_line, colorultra.ansi.clear_screen
   * Fix issue #22 - Importing fails for python3 on Windows
   * Thanks to John Szakmeister for adding support for light colors
   * Thanks to Charles Merriam for adding documentation to demos
@@ -119,9 +119,9 @@
 0.3.1
   * Fixed crash on exit with closed stdout, with thanks to Marc Abramowitz.
   * Now uses setuptools if available, and falls back to distutils if not.
-  * setup.py no longer imports anything from colorama source.
+  * setup.py no longer imports anything from colorultra source.
 0.3.0
-  * Move repository to Git, https://github.com/tartley/colorama. (My Mercurial
+  * Move repository to Git, https://github.com/tartley/colorultra. (My Mercurial
     repo seemed to be corrupted, I couldn't commit nor view patches of old
     commits, even on fresh checkouts.)
   * Fix always-crash on non-Windows platforms, reported by Matt McCormick.
@@ -200,7 +200,7 @@
   * Fix stacking of repeated atexit calls - now just called once.
   * Fix ghastly import problems while running tests.
   * 'demo.py' (hg checkout only) now demonstrates autoreset and reset atexit.
-  * Provide colorama.VERSION, used by setup.py.
+  * Provide colorultra.VERSION, used by setup.py.
   * Tests defanged so they no longer actually change terminal color when run.
 0.1.5
   * Now works on Ubuntu.

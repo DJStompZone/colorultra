@@ -1,13 +1,13 @@
-.. image:: https://img.shields.io/pypi/v/colorama.svg
-    :target: https://pypi.org/project/colorama/
+.. image:: https://img.shields.io/pypi/v/colorultra.svg
+    :target: https://pypi.org/project/colorultra/
     :alt: Latest Version
 
-.. image:: https://img.shields.io/pypi/pyversions/colorama.svg
-    :target: https://pypi.org/project/colorama/
+.. image:: https://img.shields.io/pypi/pyversions/colorultra.svg
+    :target: https://pypi.org/project/colorultra/
     :alt: Supported Python versions
 
-.. image:: https://github.com/tartley/colorama/actions/workflows/test.yml/badge.svg
-    :target: https://github.com/tartley/colorama/actions/workflows/test.yml
+.. image:: https://github.com/tartley/colorultra/actions/workflows/test.yml/badge.svg
+    :target: https://github.com/tartley/colorultra/actions/workflows/test.yml
     :alt: Build Status
 
 Colorama
@@ -20,9 +20,9 @@ cursor positioning) work under MS Windows.
   :target: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=2MZ9D2GMLYCUJ&item_name=Colorama&currency_code=USD
   :alt: Donate with Paypal
 
-`PyPI for releases <https://pypi.org/project/colorama/>`_ |
-`Github for source <https://github.com/tartley/colorama>`_ |
-`Colorama for enterprise on Tidelift <https://github.com/tartley/colorama/blob/master/ENTERPRISE.md>`_
+`PyPI for releases <https://pypi.org/project/colorultra/>`_ |
+`Github for source <https://github.com/tartley/colorultra>`_ |
+`Colorama for enterprise on Tidelift <https://github.com/tartley/colorultra/blob/master/ENTERPRISE.md>`_
 
 If you find Colorama useful, please |donate| to the authors. Thank you!
 
@@ -35,9 +35,9 @@ No requirements other than the standard library.
 
 .. code-block:: bash
 
-    pip install colorama
+    pip install colorultra
     # or
-    conda install -c anaconda colorama
+    conda install -c anaconda colorultra
 
 Description
 -----------
@@ -53,7 +53,7 @@ This has the upshot of providing a simple cross-platform API for printing
 colored terminal text from Python, and has the happy side-effect that existing
 applications or libraries which use ANSI sequences to produce colored output on
 Linux or Macs can now also work on Windows, simply by calling
-``colorama.just_fix_windows_console()`` (since v0.4.6) or ``colorama.init()``
+``colorultra.just_fix_windows_console()`` (since v0.4.6) or ``colorultra.init()``
 (all versions, but may have other side-effects – see below).
 
 An alternative approach is to install ``ansi.sys`` on Windows machines, which
@@ -65,12 +65,12 @@ Demo scripts in the source code repository print some colored text using
 ANSI sequences. Compare their output under Gnome-terminal's built in ANSI
 handling, versus on Windows Command-Prompt using Colorama:
 
-.. image:: https://github.com/tartley/colorama/raw/master/screenshots/ubuntu-demo.png
+.. image:: https://github.com/tartley/colorultra/raw/master/screenshots/ubuntu-demo.png
     :width: 661
     :height: 357
     :alt: ANSI sequences on Ubuntu under gnome-terminal.
 
-.. image:: https://github.com/tartley/colorama/raw/master/screenshots/windows-demo.png
+.. image:: https://github.com/tartley/colorultra/raw/master/screenshots/windows-demo.png
     :width: 668
     :height: 325
     :alt: Same ANSI sequences on Windows, using Colorama.
@@ -89,7 +89,7 @@ Windows, then run:
 
 .. code-block:: python
 
-    from colorama import just_fix_windows_console
+    from colorultra import just_fix_windows_console
     just_fix_windows_console()
 
 If you're on a recent version of Windows 10 or better, and your stdout/stderr
@@ -114,7 +114,7 @@ potential footguns):
 
 .. code-block:: python
 
-    from colorama import init
+    from colorultra import init
     init()
 
 This does the same thing as ``just_fix_windows_console``, except for the
@@ -139,7 +139,7 @@ This will restore ``stdout`` and ``stderr`` to their original values, so that
 Colorama is disabled. To resume using Colorama again, call ``reinit()``; it is
 cheaper than calling ``init()`` again (but does the same thing).
 
-Most users should depend on ``colorama >= 0.4.6``, and use
+Most users should depend on ``colorultra >= 0.4.6``, and use
 ``just_fix_windows_console``. The old ``init`` interface will be supported
 indefinitely for backwards compatibility, but we don't plan to fix any issues
 with it, also for backwards compatibility.
@@ -153,7 +153,7 @@ rudimentary, see below.
 
 .. code-block:: python
 
-    from colorama import Fore, Back, Style
+    from colorultra import Fore, Back, Style
     print(Fore.RED + 'some red text')
     print(Back.GREEN + 'and with a green background')
     print(Style.DIM + 'and in dim text')
@@ -183,7 +183,7 @@ shortcuts like the above to generate ANSI characters.
 
 .. code-block:: python
 
-    from colorama import just_fix_windows_console
+    from colorultra import just_fix_windows_console
     from termcolor import colored
 
     # use Colorama to make Termcolor work on Windows too
@@ -224,7 +224,7 @@ init(autoreset=False):
 
     .. code-block:: python
 
-        from colorama import init
+        from colorultra import init
         init(autoreset=True)
         print(Fore.RED + 'some red text')
         print('automatically back to default color again')
@@ -253,7 +253,7 @@ init(wrap=True):
     .. code-block:: python
 
         import sys
-        from colorama import init, AnsiToWin32
+        from colorultra import init, AnsiToWin32
         init(wrap=False)
         stream = AnsiToWin32(sys.stderr).stream
 
@@ -340,7 +340,7 @@ explanation there of why we do not want PRs that allow Colorama to generate new
 types of ANSI codes.
 
 See outstanding issues and wish-list:
-https://github.com/tartley/colorama/issues
+https://github.com/tartley/colorultra/issues
 
 If anything doesn't work for you, or doesn't do what you expected or hoped for,
 I'd love to hear about it on that issues list, would be delighted by patches,
@@ -360,20 +360,20 @@ Professional support
 
 .. |tideliftlogo| image:: https://cdn2.hubspot.net/hubfs/4008838/website/logos/logos_for_download/Tidelift_primary-shorthand-logo.png
    :alt: Tidelift
-   :target: https://tidelift.com/subscription/pkg/pypi-colorama?utm_source=pypi-colorama&utm_medium=referral&utm_campaign=readme
+   :target: https://tidelift.com/subscription/pkg/pypi-colorultra?utm_source=pypi-colorultra&utm_medium=referral&utm_campaign=readme
 
 .. list-table::
    :widths: 10 100
 
    * - |tideliftlogo|
-     - Professional support for colorama is available as part of the
+     - Professional support for colorultra is available as part of the
        `Tidelift Subscription`_.
        Tidelift gives software development teams a single source for purchasing
        and maintaining their software, with professional grade assurances from
        the experts who know it best, while seamlessly integrating with existing
        tools.
 
-.. _Tidelift Subscription: https://tidelift.com/subscription/pkg/pypi-colorama?utm_source=pypi-colorama&utm_medium=referral&utm_campaign=readme
+.. _Tidelift Subscription: https://tidelift.com/subscription/pkg/pypi-colorultra?utm_source=pypi-colorultra&utm_medium=referral&utm_campaign=readme
 
 Thanks
 ------

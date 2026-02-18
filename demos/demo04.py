@@ -4,7 +4,7 @@
 # check that stripped ANSI in redirected stderr does not affect stdout
 import sys
 import fixpath
-from colorama import init, Fore
+from colorultra import init, Fore
 
 init()
 print(Fore.GREEN + 'GREEN set on stdout. ', end='')

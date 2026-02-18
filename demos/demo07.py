@@ -1,12 +1,12 @@
 import fixpath
-import colorama
+import colorultra
 
-# Demonstrate cursor relative movement: UP, DOWN, FORWARD, and BACK in colorama.CURSOR
+# Demonstrate cursor relative movement: UP, DOWN, FORWARD, and BACK in colorultra.CURSOR
 
-up = colorama.Cursor.UP
-down = colorama.Cursor.DOWN
-forward = colorama.Cursor.FORWARD
-back = colorama.Cursor.BACK
+up = colorultra.Cursor.UP
+down = colorultra.Cursor.DOWN
+forward = colorultra.Cursor.FORWARD
+back = colorultra.Cursor.BACK
 
 def main():
     """
@@ -15,7 +15,7 @@ def main():
     aba
     3a4
     """
-    colorama.just_fix_windows_console()
+    colorultra.just_fix_windows_console()
     print("aaa")
     print("aaa")
     print("aaa")

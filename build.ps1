@@ -1,4 +1,4 @@
-$ve="$HOME\.virtualenvs\colorama"
+$ve="$HOME\.virtualenvs\colorultra"
 $bin="$ve\Scripts"
 
 & $bin\python.exe -m pip install --upgrade build

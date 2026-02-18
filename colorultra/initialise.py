@@ -89,7 +89,7 @@ def just_fix_windows_console():
     fixed_windows_console = True
 
 @contextlib.contextmanager
-def colorama_text(*args, **kwargs):
+def colorultra_text(*args, **kwargs):
     init(*args, **kwargs)
     try:
         yield
